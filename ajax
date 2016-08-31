@@ -9,7 +9,7 @@ function createXHR(){
 }
 // 请求的回调函数
 function requestCallBack() {
-    if ( request.readyState === 4 && request.status === 200 ) {
+    if ( request.readyState == 4 && ((request.status >= 200 && request.status <= 300) || request.status == 304) ) {
         console.log(request.responseText);
     }
 }
